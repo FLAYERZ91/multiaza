@@ -7,9 +7,6 @@ local inicfg = require "inicfg"
 local keys = require 'vkeys'
 local imgui = require 'imgui'
 local encoding = require 'encoding'
-encoding.default = 'CP1251'
-u8 = encoding.UTF8
-local encoding = require "encoding"
 require "lib.moonloader"
 local ev = require 'samp.events'
 local poff = false

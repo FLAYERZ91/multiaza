@@ -47,6 +47,7 @@ function main()
         pcall(Update.check, Update.json_url, Update.prefix, Update.url)
     end
     sampAddChatMessage(' MultiAza {ffffff}| Version: {f1c232}beta 0.1{ffffff} | Author: {f1c232}flayer {ffffff}| Команда для информации: {F1C232}/zaza', 0xf1c232)
+    sampAddChatMessage(' MultiAza {FFFFFF}| Version: {f1c232}beta 0.2{ffffff} | Author: {f1c232}flayer {ffffff}| Команда для информации: {f1c232}/zaza', -1)
     sampRegisterChatCommand('ade', cmd_deaza)
     sampRegisterChatCommand('am4', cmd_m4aza)
     sampRegisterChatCommand('ari', cmd_riaza)

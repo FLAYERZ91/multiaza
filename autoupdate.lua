@@ -1,5 +1,5 @@
 script_name('Multi_Aza')
-script_version("1.5")
+script_version("1.6")
 
 require 'lib.moonloader'
 local dlstatus = require('moonloader').download_status
@@ -7,6 +7,9 @@ local inicfg = require "inicfg"
 local keys = require 'vkeys'
 local imgui = require 'imgui'
 local encoding = require 'encoding'
+encoding.default = 'CP1251'
+u8 = encoding.UTF8
+local encoding = require "encoding"
 require "lib.moonloader"
 local ev = require 'samp.events'
 local poff = false
@@ -33,20 +36,20 @@ if not doesFileExist('moonloader/config/'..cfgfile) then inicfg.save(cfg1, cfgfi
 
 update_state = false
 
-local script_version = 5
-local script_version_text = "1.5"
+local script_version = 6
+local script_version_text = "1.6"
 
 local update_url = "https://raw.githubusercontent.com/FLAYERZ91/multiaza/main/update.ini"
 local update_path = getWorkingDirectory().."/update.ini"
 
-local script_url = "https://raw.githubusercontent.com/FLAYERZ91/test1/main/autoupdate.lua"
+local script_url = "https://raw.githubusercontent.com/FLAYERZ91/multiaza/main/autoupdate.lua"
 local script_path = thisScript().path
 
 function main()
     if not isSampLoaded() or not isSampfuncsLoaded() then return end
     while not isSampAvailable() do wait(100) end
 
-    sampAddChatMessage(' MultiAza {ffffff}| Version: {f1c232}beta 1.0{ffffff} | Author: {f1c232}flayer {ffffff}| Команда для информации: {F1C232}/zaza', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| Version: {f1c232}beta 1.1{ffffff} | Author: {f1c232}flayer {ffffff}| Команда для информации: {F1C232}/zaza', 0xf1c232)
     sampRegisterChatCommand('ade', cmd_deaza)
     sampRegisterChatCommand('am4', cmd_m4aza)
     sampRegisterChatCommand('ari', cmd_riaza)

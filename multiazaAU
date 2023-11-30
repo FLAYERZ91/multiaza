@@ -10,7 +10,7 @@ if enable_autoupdate then
         if autoupdate_loaded then
             Update.json_url = "https://raw.githubusercontent.com/FLAYERZ91/multiaza/main/version.json" .. tostring(os.clock())
             Update.prefix = "[" .. string.upper(thisScript().name) .. "]: "
-            Update.url = "https://raw.githubusercontent.com/FLAYERZ91/multiaza/main/multiaza%20autoupdate.lua"
+            Update.url = "https://raw.githubusercontent.com/FLAYERZ91/multiaza/main/multiazaAU.lua"
         end
     end
 end

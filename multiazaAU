@@ -1,5 +1,5 @@
 script_name('Multi_Aza')
-script_version("1.1")
+script_version("1.2")
 local enable_autoupdate = true -- false to disable auto-update + disable sending initial telemetry (server, moonloader version, script version, samp nickname, virtual volume serial number)
 local autoupdate_loaded = false
 local Update = nil
@@ -47,7 +47,6 @@ function main()
         pcall(Update.check, Update.json_url, Update.prefix, Update.url)
     end
     sampAddChatMessage(' MultiAza {ffffff}| Version: {f1c232}beta 0.1{ffffff} | Author: {f1c232}flayer {ffffff}| Команда для информации: {F1C232}/zaza', 0xf1c232)
-    sampAddChatMessage(' MultiAza {FFFFFF}| Version: {f1c232}beta 0.2{ffffff} | Author: {f1c232}flayer {ffffff}| Команда для информации: {f1c232}/zaza', -1)
     sampRegisterChatCommand('ade', cmd_deaza)
     sampRegisterChatCommand('am4', cmd_m4aza)
     sampRegisterChatCommand('ari', cmd_riaza)

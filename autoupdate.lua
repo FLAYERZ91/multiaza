@@ -49,7 +49,7 @@ function main()
     if not isSampLoaded() or not isSampfuncsLoaded() then return end
     while not isSampAvailable() do wait(100) end
 
-    sampAddChatMessage(' MultiAza {ffffff}| Version: {f1c232}beta 1.0{ffffff} | Author: {f1c232}flayer {ffffff}| Команда для информации: {F1C232}/zaza', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| Version: {f1c232}beta 1.0{ffffff} | Author: {f1c232}flayer {ffffff}| РљРѕРјР°РЅРґР° РґР»СЏ РёРЅС„РѕСЂРјР°С†РёРё: {F1C232}/zaza', 0xf1c232)
     sampRegisterChatCommand('ade', cmd_deaza)
     sampRegisterChatCommand('am4', cmd_m4aza)
     sampRegisterChatCommand('ari', cmd_riaza)
@@ -64,7 +64,7 @@ function main()
         elseif deagle == true then
             thisScript():resume()
         end
-		sampAddChatMessage(' MultiAza {ffffff}| Скрипт '..(deagle and 'выключен' or 'включен'), 0xf1c232)
+		sampAddChatMessage(' MultiAza {ffffff}| РЎРєСЂРёРїС‚ '..(deagle and 'РІС‹РєР»СЋС‡РµРЅ' or 'РІРєР»СЋС‡РµРЅ'), 0xf1c232)
 	end)
     lua_thread.create(deagle())
 
@@ -112,7 +112,7 @@ function deagle()
                 nowammo_deagle = getAmmoInCharWeapon(PLAYER_PED)
                 if prevammo_deagle == nowammo_deagle then
                     poff = true
-                    sampAddChatMessage(' MultiAza {ffffff}| Ошибка. Код: {f1c232}0', 0xf1c232)
+                    sampAddChatMessage(' MultiAza {ffffff}| РћС€РёР±РєР°. РљРѕРґ: {f1c232}0', 0xf1c232)
                 end
             end
         end
@@ -129,7 +129,7 @@ function deagle()
                 nowammo_m4 = getAmmoInCharWeapon(PLAYER_PED)
                 if prevammo_m4 == nowammo_m4 then
                     poff_m4 = true
-                    sampAddChatMessage(' MultiAza {ffffff}| Ошибка. Код: {f1c232}1', 0xf1c232)
+                    sampAddChatMessage(' MultiAza {ffffff}| РћС€РёР±РєР°. РљРѕРґ: {f1c232}1', 0xf1c232)
                 end
             end
         end
@@ -146,7 +146,7 @@ function deagle()
                 nowammo_sh = getAmmoInCharWeapon(PLAYER_PED)
                 if prevammo_sh == nowammo_sh then
                     poff_sh = true
-                    sampAddChatMessage(' MultiAza {ffffff}| Ошибка. Код: {f1c232}2', 0xf1c232)
+                    sampAddChatMessage(' MultiAza {ffffff}| РћС€РёР±РєР°. РљРѕРґ: {f1c232}2', 0xf1c232)
                 end
             end
         end
@@ -164,7 +164,7 @@ function deagle()
                 nowammo_ri = getAmmoInCharWeapon(PLAYER_PED)
                 if prevammo_ri == nowammo_ri then
                     poff_ri = true
-                    sampAddChatMessage(' MultiAza {ffffff}| Ошибка. Код: {f1c232}3', 0xf1c232)
+                    sampAddChatMessage(' MultiAza {ffffff}| РћС€РёР±РєР°. РљРѕРґ: {f1c232}3', 0xf1c232)
                 end
             end
         end
@@ -173,103 +173,103 @@ end
 
 function cmd_deaza(arg)
 	if #arg == 0 then 
-		sampAddChatMessage(" MultiAza {ffffff}| Используй {fff2cc}/ade {ffffff}[Патроны для крафта] [Количество патрон крафта]", 0xf1c232)
+		sampAddChatMessage(" MultiAza {ffffff}| РСЃРїРѕР»СЊР·СѓР№ {fff2cc}/ade {ffffff}[РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°] [РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°С‚СЂРѕРЅ РєСЂР°С„С‚Р°]", 0xf1c232)
 	else
 		var1, var2 = string.match(arg, "(.+) (.+)")
 		local ccfg = inicfg.load(nil, cfg)
 		ccfg.allaza.tocraftdeagle = var1
 		ccfg.allaza.craftdeagle = var2
 		local scfg = inicfg.save(ccfg, cfg)
-		sampAddChatMessage(" MultiAza {ffffff}| Сохранил | {fff2cc}[Deagle] {FFFFFF}Патроны для крафта: {fff2cc}"..ccfg.allaza.tocraftdeagle.." {FFFFFF}& Кол-во патрон крафта: {fff2cc}"..ccfg.allaza.craftdeagle, 0xf1c232)
+		sampAddChatMessage(" MultiAza {ffffff}| РЎРѕС…СЂР°РЅРёР» | {fff2cc}[Deagle] {FFFFFF}РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°: {fff2cc}"..ccfg.allaza.tocraftdeagle.." {FFFFFF}& РљРѕР»-РІРѕ РїР°С‚СЂРѕРЅ РєСЂР°С„С‚Р°: {fff2cc}"..ccfg.allaza.craftdeagle, 0xf1c232)
 	end
 end
 
 function cmd_m4aza(arg)
 	if #arg == 0 then 
-		sampAddChatMessage(" MultiAza {ffffff}| Используй {fff2cc}/am4 {ffffff}[Патроны для крафта] [Количество патрон крафта]", 0xf1c232)
+		sampAddChatMessage(" MultiAza {ffffff}| РСЃРїРѕР»СЊР·СѓР№ {fff2cc}/am4 {ffffff}[РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°] [РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°С‚СЂРѕРЅ РєСЂР°С„С‚Р°]", 0xf1c232)
 	else
 		var1, var2 = string.match(arg, "(.+) (.+)")
 		local ccfg = inicfg.load(nil, cfg)
 		ccfg.allaza.tocraftm4 = var1
 		ccfg.allaza.craftm4 = var2
 		local scfg = inicfg.save(ccfg, cfg)
-		sampAddChatMessage(" MultiAza {ffffff}| Сохранил | {fff2cc}[M4] {FFFFFF}Патроны для крафта: {fff2cc}"..ccfg.allaza.tocraftm4.." {FFFFFF}& Кол-во патрон крафта: {fff2cc}"..ccfg.allaza.craftm4.."", 0xf1c232)
+		sampAddChatMessage(" MultiAza {ffffff}| РЎРѕС…СЂР°РЅРёР» | {fff2cc}[M4] {FFFFFF}РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°: {fff2cc}"..ccfg.allaza.tocraftm4.." {FFFFFF}& РљРѕР»-РІРѕ РїР°С‚СЂРѕРЅ РєСЂР°С„С‚Р°: {fff2cc}"..ccfg.allaza.craftm4.."", 0xf1c232)
 	end
 end
 
 function cmd_shaza(arg)
 	if #arg == 0 then 
-		sampAddChatMessage(" MultiAza {ffffff}| Используй {fff2cc}/ash {ffffff}[Патроны для крафта] [Количество патрон крафта]", 0xf1c232)
+		sampAddChatMessage(" MultiAza {ffffff}| РСЃРїРѕР»СЊР·СѓР№ {fff2cc}/ash {ffffff}[РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°] [РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°С‚СЂРѕРЅ РєСЂР°С„С‚Р°]", 0xf1c232)
 	else
 		var1, var2 = string.match(arg, "(.+) (.+)")
 		local ccfg = inicfg.load(nil, cfg)
 		ccfg.allaza.tocraftsh = var1
 		ccfg.allaza.craftsh = var2
 		local scfg = inicfg.save(ccfg, cfg)
-		sampAddChatMessage(" MultiAza {ffffff}| Сохранил | {fff2cc}[Shotgun] {FFFFFF}Патроны для крафта: "..ccfg.allaza.tocraftsh.." & Кол-во патрон крафта: "..ccfg.allaza.craftsh.."", 0xf1c232)
+		sampAddChatMessage(" MultiAza {ffffff}| РЎРѕС…СЂР°РЅРёР» | {fff2cc}[Shotgun] {FFFFFF}РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°: "..ccfg.allaza.tocraftsh.." & РљРѕР»-РІРѕ РїР°С‚СЂРѕРЅ РєСЂР°С„С‚Р°: "..ccfg.allaza.craftsh.."", 0xf1c232)
 	end
 end
 
 function cmd_riaza(arg)
 	if #arg == 0 then 
-		sampAddChatMessage(" MultiAza {ffffff}| Используй {fff2cc}/ari {ffffff}[Патроны для крафта] [Количество патрон крафта]", 0xf1c232)
+		sampAddChatMessage(" MultiAza {ffffff}| РСЃРїРѕР»СЊР·СѓР№ {fff2cc}/ari {ffffff}[РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°] [РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°С‚СЂРѕРЅ РєСЂР°С„С‚Р°]", 0xf1c232)
 	else
 		var1, var2 = string.match(arg, "(.+) (.+)")
 		local ccfg = inicfg.load(nil, cfg)
 		ccfg.allaza.tocraftri = var1
 		ccfg.allaza.craftri = var2
 		local scfg = inicfg.save(ccfg, cfg)
-		sampAddChatMessage(" MultiAza {ffffff}| Сохранил | {fff2cc}[Rifle] {FFFFFF}Патроны для крафта: {fff2cc}"..ccfg.allaza.tocraftri.." {FFFFFF}& Кол-во патрон крафта: {fff2cc}"..ccfg.allaza.craftri.."", 0xf1c232)
+		sampAddChatMessage(" MultiAza {ffffff}| РЎРѕС…СЂР°РЅРёР» | {fff2cc}[Rifle] {FFFFFF}РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°: {fff2cc}"..ccfg.allaza.tocraftri.." {FFFFFF}& РљРѕР»-РІРѕ РїР°С‚СЂРѕРЅ РєСЂР°С„С‚Р°: {fff2cc}"..ccfg.allaza.craftri.."", 0xf1c232)
 	end
 end
 
 function cmd_ahelp()
-    sampAddChatMessage(' MultiAza {ffffff}| Помощь по скрипту:', 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| Патроны для крафта - это количество патрон в обойме при которых будет происходить крафт', 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| Кол-во патрон - это количество патрон которые будут крафтиться', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| РџРѕРјРѕС‰СЊ РїРѕ СЃРєСЂРёРїС‚Сѓ:', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р° - СЌС‚Рѕ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°С‚СЂРѕРЅ РІ РѕР±РѕР№РјРµ РїСЂРё РєРѕС‚РѕСЂС‹С… Р±СѓРґРµС‚ РїСЂРѕРёСЃС…РѕРґРёС‚СЊ РєСЂР°С„С‚', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| РљРѕР»-РІРѕ РїР°С‚СЂРѕРЅ - СЌС‚Рѕ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°С‚СЂРѕРЅ РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РєСЂР°С„С‚РёС‚СЊСЃСЏ', 0xf1c232)
 end
 
 function cmd_zaza()
-    sampAddChatMessage(' MultiAza {ffffff}| {ffffff}Скрипт сделан для канала {f1c232}@etstoorg8888', 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/ade{ffffff} - настройка AntiZeroAmmo для оружия {f1c232}Deagle', 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/am4{ffffff} - настройка AntiZeroAmmo для оружия {f1c232}M4', 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/ash{ffffff} - настройка AntiZeroAmmo для оружия {f1c232}Shotgun', 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/ari{ffffff} - настройка AntiZeroAmmo для оружия {f1c232}Rifle', 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/offaza{ffffff} - включение/отключение скрипта', 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/ainfo{ffffff} - выводит информацию актуальных настроек AntiZeroAmmo', 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/ahelp{ffffff} - выводит в чат информацию о переменных которые вводятся в командах AntiZeroAmmo', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| {ffffff}РЎРєСЂРёРїС‚ СЃРґРµР»Р°РЅ РґР»СЏ РєР°РЅР°Р»Р° {f1c232}@etstoorg8888', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/ade{ffffff} - РЅР°СЃС‚СЂРѕР№РєР° AntiZeroAmmo РґР»СЏ РѕСЂСѓР¶РёСЏ {f1c232}Deagle', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/am4{ffffff} - РЅР°СЃС‚СЂРѕР№РєР° AntiZeroAmmo РґР»СЏ РѕСЂСѓР¶РёСЏ {f1c232}M4', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/ash{ffffff} - РЅР°СЃС‚СЂРѕР№РєР° AntiZeroAmmo РґР»СЏ РѕСЂСѓР¶РёСЏ {f1c232}Shotgun', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/ari{ffffff} - РЅР°СЃС‚СЂРѕР№РєР° AntiZeroAmmo РґР»СЏ РѕСЂСѓР¶РёСЏ {f1c232}Rifle', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/offaza{ffffff} - РІРєР»СЋС‡РµРЅРёРµ/РѕС‚РєР»СЋС‡РµРЅРёРµ СЃРєСЂРёРїС‚Р°', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/ainfo{ffffff} - РІС‹РІРѕРґРёС‚ РёРЅС„РѕСЂРјР°С†РёСЋ Р°РєС‚СѓР°Р»СЊРЅС‹С… РЅР°СЃС‚СЂРѕРµРє AntiZeroAmmo', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| {fff2cc}/ahelp{ffffff} - РІС‹РІРѕРґРёС‚ РІ С‡Р°С‚ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РїРµСЂРµРјРµРЅРЅС‹С… РєРѕС‚РѕСЂС‹Рµ РІРІРѕРґСЏС‚СЃСЏ РІ РєРѕРјР°РЅРґР°С… AntiZeroAmmo', 0xf1c232)
 end
 
 function cmd_infoaza()
     local ccfg = inicfg.load(nil, cfg)
-    sampAddChatMessage(' MultiAza {ffffff}| Актуальные настройки из конфига:', 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| Настройки {fff2cc}Deagle{ffffff}: Патроны для крафта {fff2cc}'..ccfg.allaza.tocraftdeagle..'{ffffff} & Кол-во патрон: {fff2cc}'..ccfg.allaza.craftdeagle, 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| Настройки {fff2cc}M4{ffffff}: Патроны для крафта: {fff2cc}'..ccfg.allaza.tocraftm4..'{ffffff} & Кол-во патрон: {fff2cc}'..ccfg.allaza.craftm4, 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| Настройки {fff2cc}Shotgun{ffffff}: Патроны для крафта: {fff2cc}'..ccfg.allaza.tocraftsh..'{ffffff} & Кол-во патрон: {fff2cc}'..ccfg.allaza.craftsh, 0xf1c232)
-    sampAddChatMessage(' MultiAza {ffffff}| Настройки {fff2cc}Rifle{ffffff}: Патроны для крафта: {fff2cc}'..ccfg.allaza.tocraftri..'{ffffff} & Кол-во патрон: {fff2cc}'..ccfg.allaza.craftri, 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| РђРєС‚СѓР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РёР· РєРѕРЅС„РёРіР°:', 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| РќР°СЃС‚СЂРѕР№РєРё {fff2cc}Deagle{ffffff}: РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р° {fff2cc}'..ccfg.allaza.tocraftdeagle..'{ffffff} & РљРѕР»-РІРѕ РїР°С‚СЂРѕРЅ: {fff2cc}'..ccfg.allaza.craftdeagle, 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| РќР°СЃС‚СЂРѕР№РєРё {fff2cc}M4{ffffff}: РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°: {fff2cc}'..ccfg.allaza.tocraftm4..'{ffffff} & РљРѕР»-РІРѕ РїР°С‚СЂРѕРЅ: {fff2cc}'..ccfg.allaza.craftm4, 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| РќР°СЃС‚СЂРѕР№РєРё {fff2cc}Shotgun{ffffff}: РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°: {fff2cc}'..ccfg.allaza.tocraftsh..'{ffffff} & РљРѕР»-РІРѕ РїР°С‚СЂРѕРЅ: {fff2cc}'..ccfg.allaza.craftsh, 0xf1c232)
+    sampAddChatMessage(' MultiAza {ffffff}| РќР°СЃС‚СЂРѕР№РєРё {fff2cc}Rifle{ffffff}: РџР°С‚СЂРѕРЅС‹ РґР»СЏ РєСЂР°С„С‚Р°: {fff2cc}'..ccfg.allaza.tocraftri..'{ffffff} & РљРѕР»-РІРѕ РїР°С‚СЂРѕРЅ: {fff2cc}'..ccfg.allaza.craftri, 0xf1c232)
 end
 
 function ev.onServerMessage(color, text)
-    if text:find(' Осталось материалов') then
+    if text:find(' РћСЃС‚Р°Р»РѕСЃСЊ РјР°С‚РµСЂРёР°Р»РѕРІ') then
         deagle = false
     end
-    if text:find(' У вас недостаточно материалов') then
+    if text:find(' РЈ РІР°СЃ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РјР°С‚РµСЂРёР°Р»РѕРІ') then
         deagle = false
-        sampAddChatMessage(' MultiAza {ffffff}| Скрипт был отключен из-за нехватки материалов', 0xf1c232)
-        sampAddChatMessage(' MultiAza {ffffff}| Для включения скрипта напишите - {fff2cc}/offaza', 0xf1c232)
+        sampAddChatMessage(' MultiAza {ffffff}| РЎРєСЂРёРїС‚ Р±С‹Р» РѕС‚РєР»СЋС‡РµРЅ РёР·-Р·Р° РЅРµС…РІР°С‚РєРё РјР°С‚РµСЂРёР°Р»РѕРІ', 0xf1c232)
+        sampAddChatMessage(' MultiAza {ffffff}| Р”Р»СЏ РІРєР»СЋС‡РµРЅРёСЏ СЃРєСЂРёРїС‚Р° РЅР°РїРёС€РёС‚Рµ - {fff2cc}/offaza', 0xf1c232)
     end
-    if text:find(' материалов с собой') then
+    if text:find(' РјР°С‚РµСЂРёР°Р»РѕРІ СЃ СЃРѕР±РѕР№') then
         deagle = false
-        sampAddChatMessage(' MultiAza {ffffff}| Скрипт был автоматически включен из-за пополнения материалов', 0xf1c232)
+        sampAddChatMessage(' MultiAza {ffffff}| РЎРєСЂРёРїС‚ Р±С‹Р» Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РІРєР»СЋС‡РµРЅ РёР·-Р·Р° РїРѕРїРѕР»РЅРµРЅРёСЏ РјР°С‚РµСЂРёР°Р»РѕРІ', 0xf1c232)
     end
-    if text:find(' Вам недоступная данная команда') then
+    if text:find(' Р’Р°Рј РЅРµРґРѕСЃС‚СѓРїРЅР°СЏ РґР°РЅРЅР°СЏ РєРѕРјР°РЅРґР°') then
         deagle = false
-        sampAddChatMessage(' MultiAza {ffffff}| Не могу скрафтить. Скрипт был отключен', 0xf1c232)
-        sampAddChatMessage(' MultiAza {ffffff}| Для включения скрипта напишите - {fff2cc}/offaza', 0xf1c232)
+        sampAddChatMessage(' MultiAza {ffffff}| РќРµ РјРѕРіСѓ СЃРєСЂР°С„С‚РёС‚СЊ. РЎРєСЂРёРїС‚ Р±С‹Р» РѕС‚РєР»СЋС‡РµРЅ', 0xf1c232)
+        sampAddChatMessage(' MultiAza {ffffff}| Р”Р»СЏ РІРєР»СЋС‡РµРЅРёСЏ СЃРєСЂРёРїС‚Р° РЅР°РїРёС€РёС‚Рµ - {fff2cc}/offaza', 0xf1c232)
     end
-    if text:find(' Запрещено крафтить оружие') then
+    if text:find(' Р—Р°РїСЂРµС‰РµРЅРѕ РєСЂР°С„С‚РёС‚СЊ РѕСЂСѓР¶РёРµ') then
         deagle = false
-        sampAddChatMessage(' MultiAza {ffffff}| Не могу скрафтить. Скрипт был отключен', 0xf1c232)
-        sampAddChatMessage(' MultiAza {ffffff}| Для включения скрипта напишите - {fff2cc}/offaza', 0xf1c232)
+        sampAddChatMessage(' MultiAza {ffffff}| РќРµ РјРѕРіСѓ СЃРєСЂР°С„С‚РёС‚СЊ. РЎРєСЂРёРїС‚ Р±С‹Р» РѕС‚РєР»СЋС‡РµРЅ', 0xf1c232)
+        sampAddChatMessage(' MultiAza {ffffff}| Р”Р»СЏ РІРєР»СЋС‡РµРЅРёСЏ СЃРєСЂРёРїС‚Р° РЅР°РїРёС€РёС‚Рµ - {fff2cc}/offaza', 0xf1c232)
     end
 end
